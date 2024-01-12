@@ -2,7 +2,7 @@ package Command;
 
 import Flipper.Bumper;
 
-public class CommandBumperHit implements Hit {
+public class CommandBumperHit {
 
     private Bumper bumper;
 
@@ -10,8 +10,5 @@ public class CommandBumperHit implements Hit {
         this.bumper = bumper;
     }
 
-    @Override
-    public void execute() {
-        bumper.bumperGetsHit();
-    }
+
 }

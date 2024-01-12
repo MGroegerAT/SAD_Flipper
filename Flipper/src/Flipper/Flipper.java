@@ -17,6 +17,8 @@ public class Flipper implements Visitable{
 
     public List<Visitable> flipperElements = new ArrayList<>();
 
+
+
     public Flipper() {
         Target target = new Target();
         Bumper bumper = new Bumper();

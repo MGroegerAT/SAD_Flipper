@@ -9,9 +9,9 @@ public class Target implements Visitable {
         return hits;
     }
 
-    public void targetGetsHit() {
+    public void targetGetsHit(int numberOfHits) {
 
-        hits += 2;
+        hits += numberOfHits * 2;
         VisitorScore scoreVisitor = VisitorScore.getVisitorScore();
         this.accept(scoreVisitor);
     }

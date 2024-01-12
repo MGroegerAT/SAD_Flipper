@@ -2,14 +2,12 @@ package Command;
 
 import Flipper.Target;
 
-public class CommandTargetHit  implements Hit {
+public class CommandTargetHit {
 
     private Target target;
 
     private CommandTargetHit(Target target) {
         this.target = target;
     }
-    @Override
-    public void execute() {
-    }
+
 }

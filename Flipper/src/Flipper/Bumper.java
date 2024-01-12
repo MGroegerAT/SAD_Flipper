@@ -10,8 +10,8 @@ public class Bumper implements Visitable {
         return hits;
     }
 
-    public void bumperGetsHit() {
-        hits += 1;
+    public void bumperGetsHit(int numberOfHits) {
+        hits += numberOfHits;
         VisitorScore scoreVisitor = VisitorScore.getVisitorScore();
         this.accept(scoreVisitor);
     }
