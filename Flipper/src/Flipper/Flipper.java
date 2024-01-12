@@ -3,13 +3,27 @@ package Flipper;
 import Flipper.Flipper;
 import State.State;
 import State.NoCreditState;
+import Command.CommandTargetHit;
+import Command.CommandBumperHit;
+import Visitor.Visitor;
 
-public class Flipper {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Flipper implements Visitable{
 
     private static Flipper instance;
     public State state;
 
-    private Flipper() {
+    public List<Visitable> flipperElements = new ArrayList<>();
+
+    public Flipper() {
+        Target target = new Target();
+        Bumper bumper = new Bumper();
+
+        this.flipperElements.add(target);
+        this.flipperElements.add(bumper);
+
         // Set initial state to NoCreditState
         this.state = new NoCreditState();
     }
@@ -31,5 +45,13 @@ public class Flipper {
 
     public void insertCoin() {
         state.insertCoin();
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        for (Visitable flipperElements : flipperElements) {
+            flipperElements.accept(visitor);
+        }
+        visitor.visit(this);
     }
 }
