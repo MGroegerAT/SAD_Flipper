@@ -22,7 +22,7 @@ if (Flipper.getFlipper().ballCount > 0) {
         Flipper.getFlipper().play();
 
     } else {
-        System.out.println("Ciao, bis zum nächsten mal");
+        System.out.println("Thank you for playing, bye bye");
         // You may want to add an exit mechanism here if needed
     }
 }
@@ -36,7 +36,7 @@ if (Flipper.getFlipper().ballCount > 0) {
                 Flipper.getFlipper().play();
 
         } else {
-            System.out.println("Ciao, bis zum nächsten mal");
+            System.out.println("Thank you for playing, bye bye");
             // You may want to add an exit mechanism here if needed
         }
     }

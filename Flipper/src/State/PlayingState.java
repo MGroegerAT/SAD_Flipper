@@ -22,7 +22,7 @@ public PlayingState() {
 
     @Override
     public void pressStart() {
-        System.out.println("Flipper spielt");
+        System.out.println("Playing game...");
         System.out.println("\nTransition back to NoCreditState");
         Flipper.getFlipper().setState(new NoCreditState());
         Flipper.getFlipper().insertCoin();

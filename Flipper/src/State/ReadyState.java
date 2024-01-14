@@ -8,7 +8,7 @@ public class ReadyState extends State {
 
     @Override
     public void pressStart() {
-        System.out.println("Anzahl Bälle " + Flipper.getFlipper().ballCount);
+        System.out.println("Credit: " + Flipper.getFlipper().ballCount);
         Flipper.getFlipper().ballCount -= 1;
 
             System.out.println("Start game? y/n");
