@@ -2,16 +2,23 @@ package State;
 
 import java.util.Scanner;
 import Flipper.Flipper;
+import AbstractFactory.*;
 
 public class NoCreditState extends State {
 
+    private static AbstractFactory asciiText;
     @Override
     public void insertCoin() {
-if (Flipper.getFlipper().ballCount > 0) {
+
+        asciiText = AbstractFactoryANSIRegular.getInstance();
+
+if (Flipper.getFlipper().ballCount > 0 && Flipper.getFlipper().ballCount != 999) {
     Flipper.getFlipper().setState(new ReadyState());
     Flipper.getFlipper().play();
 } else {
-
+    if (Flipper.getFlipper().ballCount != 999) {
+        System.out.println(asciiText.printASCIIGameOver());
+    }
     System.out.println("\nStart new Game?");
     System.out.println("Insert Coin y/n");
     Scanner scn = new Scanner(System.in);

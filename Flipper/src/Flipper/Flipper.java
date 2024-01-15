@@ -18,7 +18,7 @@ public class Flipper implements Visitable{
 
     public List<Visitable> flipperElements = new ArrayList<>();
 
-    public int ballCount = 0;
+    public int ballCount = 999;
 
 
 

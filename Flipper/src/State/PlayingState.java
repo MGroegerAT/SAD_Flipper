@@ -5,6 +5,7 @@ import java.util.Random;
 import Flipper.*;
 import Mediator.HitRandomMediator;
 import Visitor.VisitorScore;
+
 public class PlayingState extends State {
 
 
