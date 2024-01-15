@@ -12,6 +12,6 @@ public class IncompatibleElementAdapter implements Visitable {
 
     @Override
     public void accept(Visitor visitor) {
-        // Hier können Sie den Code hinzufügen, um das inkompatible Element an den Visitor anzupassen
+        visitor.visit(incompatibleElement);
     }
 }
