@@ -3,5 +3,5 @@ package Command;
 import Flipper.Flipper;
 
 public interface Command {
-    void execute(Flipper flipper);
+    void hit(Flipper flipper);
 }

@@ -11,7 +11,7 @@ public class IncompatibleCommandAdapter implements Command {
     }
 
     @Override
-    public void execute(Flipper flipper) {
-        // Hier können Sie den Code hinzufügen, um den inkompatiblen Befehl auszuführen
+    public void hit(Flipper flipper) {
+        incompatibleCommand.incompatibleHit();
     }
 }
