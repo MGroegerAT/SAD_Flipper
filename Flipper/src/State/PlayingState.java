@@ -25,7 +25,7 @@ public PlayingState() {
     }
 
     private void play() {
-        System.out.println("Flipper spielt");
+        System.out.println("Playing game...");
         Bumper bumper = new Bumper();
         Target target = new Target();
 

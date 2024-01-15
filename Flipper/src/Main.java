@@ -8,7 +8,10 @@ public class Main {
     private static AbstractFactory asciiText;
     public static void main(String[] args) {
 
-        printText();
+       // printText();
+
+        Flipper flipper = Flipper.getFlipper();
+        flipper.insertCoin();
 
     }
 

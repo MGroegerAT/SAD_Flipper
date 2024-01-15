@@ -34,6 +34,6 @@ public class VisitorScore implements Visitor {
     }
 
     public void visit(Flipper flipper) {
-        System.out.println("Punktezahl: " + score);
+        System.out.println("Score: " + score);
     }
 }
