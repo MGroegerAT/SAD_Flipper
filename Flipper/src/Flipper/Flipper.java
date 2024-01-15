@@ -1,6 +1,7 @@
 package Flipper;
 
 import Flipper.Flipper;
+import Mediator.HitRandomMediator;
 import State.State;
 import State.NoCreditState;
 import Command.CommandTargetHit;
@@ -24,6 +25,10 @@ public class Flipper implements Visitable{
     public Flipper() {
         Target target = new Target();
         Bumper bumper = new Bumper();
+
+
+
+
 
         this.flipperElements.add(target);
         this.flipperElements.add(bumper);

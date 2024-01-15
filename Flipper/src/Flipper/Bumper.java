@@ -20,4 +20,7 @@ public class Bumper implements Visitable {
     public void accept(Visitor visitor) {
 visitor.visit(this);
     }
+
+    public void hit() {
+    }
 }

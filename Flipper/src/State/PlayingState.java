@@ -3,15 +3,13 @@ package State;
 import java.util.Random;
 
 import Flipper.*;
-import Visitor.Visitor;
+import Mediator.HitRandomMediator;
 import Visitor.VisitorScore;
 public class PlayingState extends State {
 
 
 
 public PlayingState() {
-
-
     this.play();
 }
 
@@ -22,19 +20,19 @@ public PlayingState() {
 
     @Override
     public void pressStart() {
-        System.out.println("Flipper spielt");
-        System.out.println("\nTransition back to NoCreditState");
         Flipper.getFlipper().setState(new NoCreditState());
         Flipper.getFlipper().insertCoin();
     }
 
     private void play() {
+        System.out.println("Flipper spielt");
         Bumper bumper = new Bumper();
         Target target = new Target();
 
 
-        target.targetGetsHit(randomNumberOfHits());
-        bumper.bumperGetsHit(randomNumberOfHits());
+        HitRandomMediator mediator = new HitRandomMediator(bumper, target);
+
+        mediator.flipperElementHitSequence();
 
         VisitorScore scoreVisitor = new VisitorScore();
         scoreVisitor.visit(bumper);

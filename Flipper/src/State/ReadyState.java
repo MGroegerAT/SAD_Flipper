@@ -15,11 +15,15 @@ public class ReadyState extends State {
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             if (input.equals("y")) {
-                System.out.println("\nTransition to PlayingState");
                 Flipper.getFlipper().setState(new PlayingState());
                 Flipper.getFlipper().play(); // Automatically transition to PlayingState
+        } else {
+                Flipper.getFlipper().ballCount = 0;
+                Flipper.getFlipper().setState(new NoCreditState());
+                Flipper.getFlipper().insertCoin();
 
-        }
+
+            }
     }
 
     @Override
